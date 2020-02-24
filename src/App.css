@@ -1,0 +1,57 @@
+#mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color:#132138;
+}
+
+#drum-machine {
+  display: grid;
+  grid: repeat(3, 1fr) / repeat(3, 1fr) 4fr;
+  grid-template-areas: 
+  "sound sound sound show"
+  "sound sound sound show"
+  "sound sound sound show";
+  grid-gap: 10px;
+  font-size: x-large;
+  background-color: #132c53;
+  border-radius: 4%;
+  border: solid #ffffff 1fr;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  border: solid #ffff;
+}
+
+#display {
+  display: grid;
+  grid-area: show;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2em;
+  background-color: #00469c;
+  border: solid 1px #ffff;
+  border-radius: 10px;
+}
+
+.drum-pad {
+  display: grid;
+  color: #ffffff;
+  background-color: #272626;
+  font-size: 200%;
+  border: solid 1px #ffffff;
+  border-radius: 10px;
+}
+
+#drum-machine-title {
+  display: flex;
+  align-self: center;
+  font-family: "BungeeInline-Regular";
+  color: #ffffff;
+  font-size: 4rem;
+  padding: 2%;
+}

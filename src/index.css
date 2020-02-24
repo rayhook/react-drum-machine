@@ -1,0 +1,25 @@
+
+@font-face {
+  font-family: "BungeeInline-Regular";
+  src: local("BungeeInline-Regular"), url(./fonts/BungeeInline-Regular.ttf) format("truetype")
+}
+/* dan's recomendation
+@font-face {
+  font-family: 'FasterOne-Regular';
+  src: local("FasterOne-Regular"), url(./fonts/FasterOne-Regular.ttf) format("truetype")
+}
+*/
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
