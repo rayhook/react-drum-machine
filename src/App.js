@@ -15,8 +15,9 @@ class DrumMachine extends Component {
       bgColorZ: '',
       bgColorX: '',
       bgColorC: '',
-    }
 
+    }
+    /* Use refs instead here */
     this.handlePressQ = this.handlePressQ.bind(this);
     this.handlePressW = this.handlePressW.bind(this);
     this.handlePressE = this.handlePressE.bind(this);
