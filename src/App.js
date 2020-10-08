@@ -15,8 +15,9 @@ class DrumMachine extends Component {
       bgColorZ: '',
       bgColorX: '',
       bgColorC: '',
-
     }
+    this.beatRef = React.createRef();
+    
     /* Use refs instead here */
     this.handlePressQ = this.handlePressQ.bind(this);
     this.handlePressW = this.handlePressW.bind(this);
@@ -104,7 +105,8 @@ class DrumMachine extends Component {
        bgColorQ: " "
      }) 
     }, 300)
-    document.getElementById("Q").play()
+    // document.getElementById("Q").play()
+    this.beatRef.current.play();
     };
 
   handlePressW() {
@@ -218,7 +220,8 @@ class DrumMachine extends Component {
         <div id="drum-machine">
           <div id="display">{this.state.pressed}</div>
           <button style={{backgroundColor: this.state.bgColorQ}} id="snare1" className="drum-pad" onClick={this.handlePressQ}>Q
-          <audio className="clip" id="Q" src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"></audio>
+          {/* <audio className="clip" id="Q" src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"></audio> */}
+          <audio ref={this.beatRef} className="clip" id="Q" src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"></audio>
           </button>
           <button style={{backgroundColor: this.state.bgColorW}} id="snare2" className="drum-pad" onClick={this.handlePressW}>W
           <audio className="clip" id="W" src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"></audio>
